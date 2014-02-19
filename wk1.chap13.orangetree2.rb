@@ -4,28 +4,28 @@ class OrangeTree
 	def initialize 
 		puts "A new orange tree is planted."
 		birth
-		age
+		count_the_oranges = 0
+		height = 0
 	end
 
 	def birth
-		@birthyear = (Time.new)
+		@birthyear = 0
 	end
 
 	def height
-		@feet_tall = age.to_i * 2
+		@feet_tall = age_increase.to_i * 2
+		puts height
 	end
 
-	def age
-
-		puts "How many years from now should I calculate for?"
-		@age = gets.chomp
+	def age_increase
+		birth = birth.to_i + 1
 
 	end
 
-	def one_year 
+#	def one_year 
 		# @nineteenseventy = Time.local(1970, 1, 1)
-		@another_year = @age.to_i + ((birth.to_i + 31536000)/31536000) - (@birthyear.to_i/31536000)
-	end
+#		@another_year = @age_increase.to_i + ((birth.to_i + 31536000)/31536000) - (@birthyear.to_i/31536000)
+#	end
 
 	def count_the_oranges
 
@@ -41,13 +41,13 @@ class OrangeTree
 end
 
 
-tree1 = OrangeTree.new.count_the_oranges
+tree1 = OrangeTree.new.age_increase
 
 puts tree1
 
 puts tree1
 
-
+puts height
 
 
 
